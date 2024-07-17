@@ -63,6 +63,18 @@ body {
 		background-size: 125% 125%;
 	}
 }
+h1 {
+	font-size: var(--txt-xl);
+	margin-bottom: 1rem;
+}
+button {
+	padding: 0.5em 1rem;
+	background: none !important;
+	border: 1px solid #fff;
+	border-radius: 12px;
+	margin-inline: auto;
+	margin-bottom: 1rem;
+}
 
 #scanner_body {
 	display: grid;
@@ -99,6 +111,11 @@ body {
 		#reader__scan_region {
 			border: 1px solid #fff;
 			border-radius: 12px;
+
+			video, canvas {
+				width: 100% !important;
+				border-radius: 12px;
+			}
 		}
 
 		img {
@@ -108,13 +125,15 @@ body {
 	#reader__dashboard {
 		margin-top: 2rem;
 
-		button {
-			padding: 0.5em 1rem;
-			background: none !important;
-			border: 1px solid #fff;
-			border-radius: 12px;
-			margin-bottom: 1rem;
+		
+		#html5-qrcode-anchor-scan-type-change{
+			font-size: var(--txt-small);
 		}
+	}
+	#result {
+		display: grid;
+		justify-content: center;
+		width: 100%;
 	}
 
 	#footer {

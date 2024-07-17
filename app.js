@@ -16,10 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
         scanner.render(success, error);
         function success(result){
             document.getElementById('result').innerHTML = `
-			<h2>Erfolgreich gescannt</h2>
+			<h2>Scann erfolgreich!</h2>
 			<p><a href="${result}">${result}</a></p>
-			<br><br>
-			<a href="index.html">nochmal scannen</a>
+			<button href="index.html">nochmal scannen</button>
 				`;
             scanner.clear();
 		
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
  
         function error(err){
-            //console.error(err);
+            // console.error(err);
         }
     } else {
         console.error('Html5Qrcode ist nicht definiert. Stellen Sie sicher, dass die Bibliothek korrekt geladen wurde.');
