@@ -206,4 +206,25 @@ button, .btn, .html5-qrcode-element {
 			0px 20.9px 33.4px rgba(0, 0, 0, 0.05),
 			0px 50px 80px rgba(0, 0, 0, 0.07);
 	}
-}
+
+	table {
+		thead th {
+			font-size: var(--txt-l);
+			background: #ff14c43f;
+			padding: .5em;
+		}
+		tbody {
+			tr {
+			
+				&:nth-child(odd) {
+					background: #ffffff5c;
+				}
+				td {
+					padding: 6px;
+					&:last-child {
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
