@@ -111,6 +111,7 @@ button, .btn, .html5-qrcode-element {
 	border-radius: 16px;
 	padding: 1rem;
 	height: calc(100dvh - (var(--spacing-inline) / 2));
+	max-height: 812px;
 
 	box-shadow:
 		0px 1.4px 2.2px rgba(0, 0, 0, 0.02),
