@@ -4,16 +4,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // Let's go der Hase!
     console.info('%cmade with ♥ Mike Pridik', 'background: rgb(43,84,124); color:#fff;padding: 3px');
 
-    // Zugriff auf die Kamera anfordern
-    navigator.mediaDevices.getUserMedia({ video: true })
-        .then(function(stream) {
-            var video = document.getElementById('video');
-            video.srcObject = stream;
-            video.play();
-        })
-        .catch(function(error) {
-            console.log("Fehler beim Zugriff auf die Kamera: ", error);
-        });
+    // Funktion zum Starten des Video-Streams
+    function startVideoStream() {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(stream) {
+                var video = document.getElementById('video');
+                video.srcObject = stream;
+                video.play();
+            })
+            .catch(function(error) {
+                var errorMessage = "Fehler beim Zugriff auf die Kamera: " + error.name;
+                switch(error.name) {
+                case "NotAllowedError":
+                    errorMessage += " - Zugriff verweigert. Bitte erlaube den Zugriff auf die Kamera.";
+                    break;
+                case "NotFoundError":
+                    errorMessage += " - Keine Kamera gefunden. Stelle sicher, dass eine Kamera angeschlossen und verfügbar ist.";
+                    break;
+                case "NotReadableError":
+                    errorMessage += " - Kamera ist bereits in Verwendung. Schließe alle anderen Anwendungen, die die Kamera nutzen.";
+                    break;
+                default:
+                    errorMessage += " - Ein unbekannter Fehler ist aufgetreten.";
+                    break;
+                }
+                console.log(errorMessage);
+                alert(errorMessage);
+            });
+    }
+
+    // Starte den Video-Stream
+    startVideoStream();
 
     // Foto aufnehmen und Barcode erkennen
     document.getElementById('snap').addEventListener('click', function() {
