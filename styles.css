@@ -161,7 +161,8 @@ button, .btn, .html5-qrcode-element {
 		}
 	}
 	#result {
-		display: grid;
+		display: flex;
+		flex-direction: row;
 		justify-content: center;
 		justify-items: center;
 		width: 100%;
