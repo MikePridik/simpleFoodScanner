@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('data: ', data);
             const product = data.product;
             resultWrapper.innerHTML = `
-                <span>Angaben zum Produkt</span>
-                <h2 class="txt--shadow">${product.product_name_de}</h2>
+                <span>Angaben zum Produkt: ${data.code}</span>
+                <h2 class="txt--shadow">${product.product_name}</h2>
                 <img src="${product.selected_images.front.display.de}" alt="${product.product_name_de}">
 
                 
