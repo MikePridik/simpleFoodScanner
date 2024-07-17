@@ -33,3 +33,4 @@ Benutze in irgendeiner Form die Open Food Facts API.
 
 ### Copyright information
 This is a non commercial fun project
+Barcode Scan via https://github.com/mebjas/html5-qrcode

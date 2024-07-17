@@ -4,22 +4,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Willst du mich wirklich essen?</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
-	<!-- <link rel="stylesheet" href="styles.css"> -->
+	<link rel="stylesheet" href="styles.css">
+	<script src="html5-qrcode.min.js" defer></script>
 	<script src="app.js" defer></script>
 </head>
 <body>
    <div id="scanner_body">
-   	 <h1>Foto aufnehmen und Barcode scannen</h1>
-	    <video id="video" width="320" height="140" autoplay></video>
-	    <button id="snap">Foto aufnehmen</button>
-	    <canvas id="canvas" width="320" height="140"></canvas>
-	    <p id="barcodeResult"></p>
-	    <p id="foodInfo"></p>
+	<h1>Bitte Code Scannen</h1>
+	<div id="reader"></div>
+	<div id="result"></div>
+	<div id="footer">Mike Pridik - 2024</div>
    </div>
-
-    <script>
-        
-    </script>
 </body>
 </html>
